@@ -1,0 +1,71 @@
+<div *ngIf="isComponentVisible" class="container mt-5 d-flex flex-column justify-content-center align-items-center" style="height: 100vh; position: relative;" dir="rtl">
+  <h1>ברוכים הבאים לאתר</h1>
+  <h2>MathTicTac</h2>
+  <p>הנה הסבר קצר איך עובד האתר</p>
+  <style>
+      h2 {
+          text-align: center;
+          color: blue;
+          font-size: 50px;
+          font-family: courier;
+      }
+      h1 {
+          text-align: center;
+          color: blueviolet;
+          font-size: 55px;
+          font-family: courier;
+      }
+      p {
+          text-align: center;
+          color: black;
+          font-size: 25px;
+          font-family: 'Franklin Gothic Medium';
+      }
+      /* Directly style the iframe */
+      .custom-iframe {
+          width: 600px;  /* Adjust as needed */
+          height: 250px; /* Adjust as needed */
+          margin: 0 auto;
+          display: block;
+      }
+      .custom-btn {
+        border-radius: 25px; /* Adjust to achieve the desired rounding */
+        background-color: #3498db; /* Example color: a shade of blue */
+        color: white; /* Text color */
+        border: none; /* Removes the default border */
+        padding: 20px 30px; /* Adds some padding */
+        transition: background-color 0.3s; /* Smooth transition for hover effect */
+    }
+    .custom-btn:hover {
+      background-color: #2980b9; 
+      cursor: pointer;
+  }
+  .button-group {
+    margin-top: 20px;  /* Adjust this value to increase or decrease the space */
+}
+/* ... (the rest of your styles) ... */
+
+.btn-spacing {
+  margin-right: 50px;  /* Adjust this value to increase or decrease the space */
+}
+
+</style>
+
+<!-- Absolute centered container for YouTube video and buttons -->
+<div class="d-flex flex-column align-items-center justify-content-center" style="position: absolute; top: 65%; left: 50%; transform: translate(-50%, -50%);">
+  <!-- YouTube video with a direct size -->
+  <iframe class="custom-iframe" [src]="videoUrl" frameborder="0" allowfullscreen></iframe>
+
+  <!-- Button Group with added class for margin -->
+  <div class="d-flex justify-content-center button-group">
+    <button class="btn custom-btn btn-spacing" (click)="navigateToRegister()">משתמש חדש? הרשם כאן</button>
+    <button class="btn btn-secondary custom-btn" (click)="navigateToLogin()">רשום לאתר? הכנס</button>
+</div>
+      
+  </div>
+</div>
+
+
+
+
+
